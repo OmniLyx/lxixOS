@@ -1,0 +1,2 @@
+boot: floppy
+floppya: type=1_44, 1_44="./bin/os-image", status=inserted, write_protected=0
