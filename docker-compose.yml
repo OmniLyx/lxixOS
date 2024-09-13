@@ -1,0 +1,6 @@
+services:
+  ubuntu:
+    image: ubuntu:latest
+    volumes:
+      - ./iso:/iso
+    command: ["/bin/bash", "-c", "apt-get update && apt-get install -y build-essential nasm genisoimage && cd /iso && ./iso.sh"]
