@@ -1,12 +1,10 @@
 *.bin
 *.d
-*.exe
-*.exe.run
 *.img
 *.map
 *.o
 *.patch
 *.suo
 *.elf
-
-bin/*
+*.txt
+*.iso
