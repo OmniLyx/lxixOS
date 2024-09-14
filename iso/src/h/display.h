@@ -1,3 +1,6 @@
+#ifndef INCLUDE_DISPLAY_H
+#define INCLUDE_DISPLAY_H
+
 /** fb_write_cell:
  *  Writes a character with the given foreground and background to position i
  *  in the framebuffer.
@@ -16,7 +19,6 @@ void FrameBufferWriteCell(unsigned int i, char c, unsigned char color);
  */
 void ClearScreen(unsigned char bg);
 
-
-
-
 int write(char *buf, unsigned int len);
+
+#endif
