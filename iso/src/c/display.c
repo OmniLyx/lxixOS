@@ -17,7 +17,7 @@ void ClearScreen(unsigned char bg)
     }
 }
 
-int write(char *buf, unsigned int len){
+int Write(char *buf, unsigned int len){
     for(int i = 0; i < len; i++){
         FrameBufferWriteCell(i * 2, buf[i], 0x0F);
     }
