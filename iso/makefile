@@ -40,5 +40,4 @@ run: os.iso
 	$(AS) $(ASFLAGS) $< -o $@
 
 clean:
-	echo $(C_OBJECTS)
 	rm -rf */*/*.o kernel.elf os.iso
