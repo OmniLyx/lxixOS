@@ -1,4 +1,4 @@
-OBJECTS = src/asm/loader.o
+OBJECTS = $(patsubst %.s, %.o, $(wildcard src/asm/*.s))
 C_OBJECTS = $(patsubst %.c, %.o, $(wildcard src/c/*.c))
 HEADERS = $(wildcard src/h/*.h)
 CC = gcc
