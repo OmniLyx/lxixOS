@@ -19,6 +19,6 @@ void FrameBufferWriteCell(unsigned int i, char c, unsigned char color);
  */
 void ClearScreen(unsigned char bg);
 
-void Write(char *buf, unsigned int len);
+void FrameBufferWrite(char *buf, unsigned int len);
 
 #endif

@@ -56,3 +56,33 @@ void SerialConfigureLine(unsigned short com)
         */
     OutB(SERIAL_LINE_COMMAND_PORT(com), 0x03);
 }
+
+/** SerialIsTransmitFifoEmpty:
+ *  Checks whether the transmit FIFO queue is empty or not for the given COM
+ *  port.
+ *
+ *  @param  com The COM port
+ *  @return 0 if the transmit FIFO queue is not empty
+ *          1 if the transmit FIFO queue is empty
+ */
+int SerialIsTransmitFifoEmpty(unsigned int com)
+{
+    /* 0x20 = 0010 0000 */
+    return InB(SERIAL_LINE_STATUS_PORT(com)) & 0x20;
+}
+
+/** SerialWrite:
+ *  Writes a string to the given COM port
+ *
+ *  @param com The COM port
+ *  @param str The string to write
+ */
+void SerialWrite(unsigned short com, char *str)
+{
+    while (*str != 0)
+    {
+        while (SerialIsTransmitFifoEmpty(com) == 0);
+        OutB(com, *str);
+        str++;
+    }
+}

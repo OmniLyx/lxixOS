@@ -12,6 +12,16 @@
 
 void OutB(unsigned short port, unsigned char data);
 
+
+/** InB:
+ *  Read a byte from an I/O port.
+ *
+ *  @param  port The address of the I/O port
+ *  @return      The read byte
+ */
+unsigned char InB(unsigned short port);
+
+
 /** fb_move_cursor:
  * 
  * @param pos The new position of the cursor
@@ -20,14 +30,5 @@ void OutB(unsigned short port, unsigned char data);
 
 void FrameBufferMoveCursor(unsigned short pos);
 
-/* in file io.h */
-
-/** inb:
- *  Read a byte from an I/O port.
- *
- *  @param  port The address of the I/O port
- *  @return      The read byte
- */
-unsigned char inb(unsigned short port);
 
 #endif /* INCLUDE_IO_H */

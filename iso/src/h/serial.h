@@ -24,4 +24,7 @@ void SerialConfigureBaudRate(unsigned short com, unsigned short divisor);
  */
 void SerialConfigureLine(unsigned short com);
 
+
+void SerialWrite(unsigned short com, char *str);
+
 #endif

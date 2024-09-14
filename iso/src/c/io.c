@@ -18,5 +18,4 @@ void FrameBufferMoveCursor(unsigned short pos)
     OutB(FB_DATA_PORT,    ((pos >> 8) & 0x00FF));
     OutB(FB_COMMAND_PORT, FB_LOW_BYTE_COMMAND);
     OutB(FB_DATA_PORT,    pos & 0x00FF);
-
 }

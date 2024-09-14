@@ -8,3 +8,7 @@
 *.elf
 *.txt
 *.iso
+*.out
+
+# VScode
+.vscode
