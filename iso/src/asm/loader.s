@@ -22,13 +22,10 @@ kernal_stack :
 mov esp, kernal_stack + KERNAL_STACK_SIZE
 
 section .text
-extern boot   ; the function sum_of_three is defined elsewhere
+extern Boot   ; the function sum_of_three is defined elsewhere
 loader:
     ; The assembly code
-    push dword 3            ; arg3
-    push dword 2            ; arg2
-    push dword 1            ; arg1
-    call boot       ; call the function, the result will be in eax
+    call Boot       ; call the function, the result will be in eax
 
 .loop:
     jmp .loop

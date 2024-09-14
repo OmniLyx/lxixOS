@@ -1,6 +1,12 @@
-int boot(void) {
-    char *fb = (char *) 0x000B8000;
-    fb[0] = 'A';
-    fb[1] = 0x28;
+#include <display.h>
+
+
+int Boot(void) {
+    ClearScreen(0x00);
+    FrameBufferWriteCell(0, 'H', 0x0F, 0x00);
+    FrameBufferWriteCell(2, 'e', 0x0F, 0x00);
+    FrameBufferWriteCell(4, 'l', 0x0F, 0x00);
+    FrameBufferWriteCell(6, 'l', 0x0F, 0x00);
+    FrameBufferWriteCell(8, 'o', 0x0F, 0x00);
     return 0;
 }
