@@ -15,3 +15,8 @@ void FrameBufferWriteCell(unsigned int i, char c, unsigned char color);
  *  @param bg The background color
  */
 void ClearScreen(unsigned char bg);
+
+
+
+
+int write(char *buf, unsigned int len);
