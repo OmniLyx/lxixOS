@@ -4,10 +4,9 @@
  *
  *  @param i  The location in the framebuffer
  *  @param c  The character
- *  @param fg The foreground color
- *  @param bg The background color
+ *  @param color The color
  */
-void FrameBufferWriteCell(unsigned int i, char c, unsigned char fg, unsigned char bg);
+void FrameBufferWriteCell(unsigned int i, char c, unsigned char color);
 
 
 /** ClearScreen:
