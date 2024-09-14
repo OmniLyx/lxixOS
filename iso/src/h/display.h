@@ -10,15 +10,6 @@
 void FrameBufferWriteCell(unsigned int i, char c, unsigned char fg, unsigned char bg);
 
 
-/** fb_write:
- *  Writes a string with the given foreground and background to the framebuffer
- *
- *  @param str The string to write
- *  @param fg  The foreground color
- *  @param bg  The background color
- */
-void FrameBufferWrite(char str, unsigned char fg, unsigned char bg);
-
 /** ClearScreen:
  *  Clears the screen with the given background color
  *
