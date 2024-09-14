@@ -1,4 +1,6 @@
-# OS DEV
+# LXIS-OS
+
+pronounced: LIXOS
 
 ## FileStructure
 - src : all source files for the os (assembly, c, etc)
