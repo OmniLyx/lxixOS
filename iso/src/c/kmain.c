@@ -21,6 +21,5 @@ void Boot(void) {
     char loadedMSG[10] = "Loaded GDT";
     FrameBufferWrite(loadedMSG, 10);
 
-    // Call the main function
-    // Kmain();
+    asm volatile("hlt");
 }
