@@ -11,4 +11,4 @@
 *.out
 
 # VScode
-.vscode
+*.vscode*
