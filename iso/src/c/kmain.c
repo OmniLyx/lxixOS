@@ -1,6 +1,7 @@
-#include "display.h"
-#include "serial.h"
-#include "gdt.h"
+#include "../h/display.h"
+#include "../h/serial.h"
+#include "../h/gdt.h"
+#include "../h/idt.h"
 
 
 
@@ -14,6 +15,9 @@ void Boot(void) {
 
     // Initialize and load the GDT
     InitializeGDT();
+
+    // Initialize and load the IDT
+    InitializeIDT();
 
     // check if the GDT is loaded
     // asm volatile("hlt");
